@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>JspBasic</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  
+  <!--
+   # XML이란 (eXtensible Markup Language)
+   - 데이터를 전달하기 위한 수단으로 사용하는 문서
+   - 서로 다른 언어를 사용하는 프로그램 간의 데이터를 표현하기 위한 기준으로 사용. 
+     -->
+     
+     <servlet>
+     <servlet-name>basic</servlet-name>
+     <servlet-class>com.jsp.servlet.ServletBasic</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     <servlet-name>basic</servlet-name>
+     <url-pattern>/basic</url-pattern>
+     </servlet-mapping>
+  
+</web-app>
