@@ -26,5 +26,20 @@
      <servlet-name>basic</servlet-name>
      <url-pattern>/basic</url-pattern>
      </servlet-mapping>
+     
+     <error-page>
+     <error-code>404</error-code>
+     <location>/Exception/error_404.jsp</location>
+     </error-page>
+     
+     <error-page>
+     <exception-type>java.lang.NullPointerException</exception-type>
+     <location>/Exception/error_null.jsp</location>
+     </error-page>
+     
+     
+     
+     
+     
   
 </web-app>
