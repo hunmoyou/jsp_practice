@@ -19,18 +19,39 @@
         나머지는 모두 F처리하시면 됩니다.
     --%>
     
-   <c:set var="p" value="${param.score}"/>
-   
-   # 이름: ${param.name}<br>
-   # 점수: ${score}<br>
+   <c:set var="p" value="${param.point}"/>
    
    당신의 점수는: <strong>${p}점</strong>
    
    <c:choose>
-   	<c:when test="${p>100 }">
+   	<c:when test="${p > 100}">
    		<h4>점수를 잘못 입력하셨습니다.</h4>
    	</c:when>
+   	<c:when test="${p >= 90}">
+   		<c:choose>
+   			<c:when test="${p>=95}">
+   				<h4>당신의 학점은 A+ 입니다.</h4>
+   			</c:when>
+   			<c:otherwise>
+   				<h4>당신의 학점은 A0입니다.</h4>
+   			</c:otherwise>
+   		</c:choose>
+   	</c:when>
+   	<c:when test="${p>=80}">
+   		<h4>당신의 학점은 B입니다.</h4>
+   	</c:when>
+   		<c:when test="${p>=70}">
+   		<h4>당신의 학점은 C입니다.</h4>
+   	</c:when>
+   		<c:when test="${p>=60}">
+   		<h4>당신의 학점은 D입니다.</h4>
+   	</c:when>
+   	<c:otherwise>
+   		<h4>당신의 학점은 F입니다.</h4>
+   	</c:otherwise>
    </c:choose>
+   
+   
    
    
 
